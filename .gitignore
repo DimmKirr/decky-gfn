@@ -1,0 +1,14 @@
+node_modules/
+.devcell/
+.devcell.toml
+dist/
+build/
+*.zip
+__pycache__/
+.pytest_cache/
+test-results/
+playwright-report/
+.vite/
+.scratch/
+coverage/
+.pnpm-store/

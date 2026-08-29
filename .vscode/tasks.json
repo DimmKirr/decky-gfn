@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "pnpm build",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "package",
+      "type": "shell",
+      "command": "pnpm package",
+      "dependsOn": ["build"],
+      "problemMatcher": []
+    },
+    {
+      "label": "deploy to deck",
+      "type": "shell",
+      "command": "rsync -azp --delete --chmod=D0755,F0755 build/decky-gfn/ deck@steamdeck:/home/deck/homebrew/plugins/decky-gfn/",
+      "dependsOn": ["package"],
+      "problemMatcher": []
+    }
+  ]
+}

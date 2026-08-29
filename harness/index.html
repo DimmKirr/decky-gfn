@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>decky-gfn harness</title>
+    <style>
+      body { margin: 0; background: #0e141b; color: #dcdedf; font-family: sans-serif; display: flex; }
+      #qam { width: 300px; min-height: 100vh; background: #171d25; padding: 12px; box-sizing: border-box; }
+      #page { flex: 1; padding: 12px; }
+      #steam-log { position: fixed; bottom: 0; right: 0; width: 420px; max-height: 180px; overflow: auto;
+                   background: #000a; font: 11px monospace; padding: 8px; }
+      button { cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <div id="qam"></div>
+    <div id="page"></div>
+    <pre id="steam-log"></pre>
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>
