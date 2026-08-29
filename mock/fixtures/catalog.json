@@ -1,0 +1,630 @@
+[
+  {
+    "gameId": "dcff9c03-5971-4992-ab7d-0f655ef0bfe2",
+    "title": "Counter-Strike 2",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100884811/ZZ/TV_BANNER_01_8b2e4223-92d0-4b95-93a7-ec44ed6c1a88.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100884811/ZZ/HERO_IMAGE_01_ed961599-cfd6-48a0-9bc2-533a93203f9e.jpg",
+    "variants": [
+      {
+        "cmsId": "7315111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "030124b8-5d5c-4187-b67d-5ae9994b8f96",
+    "title": "Path of Exile 2",
+    "imageUrl": "https://img.nvidiagrid.net/apps/102456711/ZZ/TV_BANNER_01_bd23da25-fc82-4a12-a8e4-7aebd9e8f3e2.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/102456711/ZZ/HERO_IMAGE_01_7146fceb-a374-4c48-8040-5efad63e745c.jpg",
+    "variants": [
+      {
+        "cmsId": "102457111",
+        "store": "NONE"
+      },
+      {
+        "cmsId": "103218066",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "102457011",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "64cc9e92-6ad6-49b9-a335-8a579ba7b434",
+    "title": "Genshin Impact",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101574711/ZZ/TV_BANNER_01_3852ab9d-e683-4180-8d22-a1afe8d01c19.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101574711/ZZ/HERO_IMAGE_01_6b875e33-2684-445e-b3e5-cd76ba884830.jpg",
+    "variants": [
+      {
+        "cmsId": "101574611",
+        "store": "UNKNOWN"
+      }
+    ]
+  },
+  {
+    "gameId": "46bfab06-d864-465d-9e56-2d9e45cdee0a",
+    "title": "Fortnite®",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101138111/ZZ/TV_BANNER_01_dc9cca79-eee4-4f80-bab3-607190a7706a.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101138111/ZZ/HERO_IMAGE_01_9f2d3ae9-2f5f-4798-a2b4-6cf11d1017e8.jpg",
+    "variants": [
+      {
+        "cmsId": "100013311",
+        "store": "EPIC"
+      }
+    ]
+  },
+  {
+    "gameId": "432ddb0d-1f56-4546-ba6e-2091e615c1fc",
+    "title": "Dota 2®",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100917011/ZZ/TV_BANNER_01_3a2863df-5932-42d1-9df4-4b8f91d54b8a.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100917011/ZZ/HERO_IMAGE_01_295c3f74-96a9-447a-a418-0b1192559d23.jpg",
+    "variants": [
+      {
+        "cmsId": "9029111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "326bf7cb-4bfc-4c8b-bfcb-4fdcafb4ef62",
+    "title": "Forza Horizon 6",
+    "imageUrl": "https://img.nvidiagrid.net/apps/107069168/ZZ/TV_BANNER_01_7b3a959a-38b7-4ac8-b592-5ad73801f3a5.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/107069168/ZZ/HERO_IMAGE_01_d819ab71-f057-4427-9b36-8717e40e8fb5.jpg",
+    "variants": [
+      {
+        "cmsId": "107070304",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107070708",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "f66d19a8-4d80-406f-b1f0-075ff5e9b51c",
+    "title": "Honkai: Star Rail",
+    "imageUrl": "https://img.nvidiagrid.net/apps/102240611/ZZ/TV_BANNER_01_603fabef-c6e6-45e3-bd9f-4c8bfb692f72.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/102240611/ZZ/HERO_IMAGE_01_4ee907b7-89a5-4f2d-a16f-0e048058edb1.jpg",
+    "variants": [
+      {
+        "cmsId": "102241311",
+        "store": "UNKNOWN"
+      }
+    ]
+  },
+  {
+    "gameId": "891174c3-61a5-4b20-a3a1-adc85985708e",
+    "title": "Wuthering Waves",
+    "imageUrl": "https://img.nvidiagrid.net/apps/102926463/ZZ/TV_BANNER_01_55712f36-a6be-4b2c-9cfb-e3bbcc911393.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/102926463/ZZ/HERO_IMAGE_01_f3d0ae3c-eaa7-4b59-8a5f-b342daa6de42.jpg",
+    "variants": [
+      {
+        "cmsId": "103053062",
+        "store": "NONE"
+      },
+      {
+        "cmsId": "102926783",
+        "store": "EPIC"
+      }
+    ]
+  },
+  {
+    "gameId": "956b4ff0-4fa7-43ca-a565-a552723977bb",
+    "title": "War Thunder",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100888211/ZZ/TV_BANNER_01_0f2c9067-ba8f-40ca-b7b6-86f164cf5b5b.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100888211/ZZ/HERO_IMAGE_01_a0914bde-4016-48d6-94b7-77415f5d8050.jpg",
+    "variants": [
+      {
+        "cmsId": "10839111",
+        "store": "GAIJIN"
+      },
+      {
+        "cmsId": "100234911",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "9cca0ab8-6f62-42ee-8ef3-46fcddc09140",
+    "title": "Dead by Daylight",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100886311/ZZ/TV_BANNER_01_f3fff83e-58d8-457e-ab66-0b451824d30a.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100886311/ZZ/HERO_IMAGE_01_9e6238f0-ddd9-4b17-81c5-3e5d41f9dbe7.jpg",
+    "variants": [
+      {
+        "cmsId": "102065011",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "18545711",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "102399811",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "ef34a057-8ff1-4129-9e9b-387e67cecda5",
+    "title": "Rust",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101385811/ZZ/TV_BANNER_01_8f713d3f-fe74-4816-a35c-4b57fe1f385d.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101385811/ZZ/HERO_IMAGE_01_3919609f-5077-4ddb-b4e9-f03a13174ef2.jpg",
+    "variants": [
+      {
+        "cmsId": "18105111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "8c0c09ee-cbf0-4b2c-9873-342a2cb76e48",
+    "title": "World of Tanks",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100882711/ZZ/TV_BANNER_01_7c7c8240-1067-4c4e-a820-8a0b40cf8180.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100882711/ZZ/HERO_IMAGE_01_c0f91216-f64c-4d51-a9df-501165162c0c.jpg",
+    "variants": [
+      {
+        "cmsId": "100133011",
+        "store": "NONE"
+      },
+      {
+        "cmsId": "102055411",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "23346751-e1e5-40c6-8899-ec3fe6962e3a",
+    "title": "The Witcher® 3: Wild Hunt",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100883811/ZZ/TV_BANNER_01_b6fede87-dc14-444f-a3b3-120a4202adf4.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100883811/ZZ/HERO_IMAGE_01_d0c04bf0-669a-4d62-b1a4-fc0e965f65c3.jpg",
+    "variants": [
+      {
+        "cmsId": "100817611",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "100932511",
+        "store": "GOG"
+      },
+      {
+        "cmsId": "100044011",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "d32c9410-62cb-45cf-9c53-740bb92d4a2d",
+    "title": "Diablo® IV",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101069911/ZZ/TV_BANNER_01_0a0383ef-876d-4d1c-9df3-8bd1870036fe.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101069911/ZZ/HERO_IMAGE_01_830ab24d-bc3b-4597-87cc-69b4045c630a.jpg",
+    "variants": [
+      {
+        "cmsId": "102348311",
+        "store": "BATTLENET"
+      },
+      {
+        "cmsId": "102670811",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "ce2eca28-aa8c-4b4b-a3e2-5ad03a9f8ecd",
+    "title": "007 First Light",
+    "imageUrl": "https://img.nvidiagrid.net/apps/106864393/ZZ/TV_BANNER_01_22df286c-76ed-4e85-94d1-bf3f3f0041e8.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/106864393/ZZ/HERO_IMAGE_01_3c1bbe5c-cadd-4164-8d2d-a2366a02873d.jpg",
+    "variants": [
+      {
+        "cmsId": "107396395",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "106864881",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107670370",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "436b0171-64a7-427b-bc5f-07d64c8e5ed1",
+    "title": "Euro Truck Simulator 2",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101109311/ZZ/TV_BANNER_01_5dab41f7-3680-4b07-9685-4a52e94855ec.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101109311/ZZ/HERO_IMAGE_01_2e18e13d-0178-4694-bf63-777ccd88d24e.jpg",
+    "variants": [
+      {
+        "cmsId": "12129111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "405b1ba5-c881-4f2b-8f7d-cc9e7cd59b74",
+    "title": "Overwatch®",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101595711/ZZ/TV_BANNER_01_bc48c3b5-4275-4d9c-af5f-a8130b3ed646.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101595711/ZZ/HERO_IMAGE_01_f0cae7fb-e5db-4a2d-af6d-f3ee423c6e6d.jpg",
+    "variants": [
+      {
+        "cmsId": "100482211",
+        "store": "BATTLENET"
+      },
+      {
+        "cmsId": "102456611",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "9bcbf5b4-c460-4091-931c-a5a2a1fd9cc2",
+    "title": "Rocket League®",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100871511/ZZ/TV_BANNER_01_3629f9cc-82e9-4274-81d8-7390374a2c4a.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100871511/ZZ/HERO_IMAGE_01_7648b37a-592f-4e4c-be90-b33e2b99cf8b.jpg",
+    "variants": [
+      {
+        "cmsId": "100871611",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "17034111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "4b44eb06-3d68-4ca0-92b8-ce4ffd20dff4",
+    "title": "Marvel Rivals",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101805611/ZZ/TV_BANNER_01_b6f94dcb-99a5-48c0-9802-9d60dcd8985d.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101805611/ZZ/HERO_IMAGE_01_42cd4b55-e7f3-45c3-b7b3-db5d54804b00.jpg",
+    "variants": [
+      {
+        "cmsId": "101808711",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "095ad0c3-2167-45f1-aa80-1eceacbdeebb",
+    "title": "Baldur's Gate 3",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100980011/ZZ/TV_BANNER_01_a81c5653-1d0c-44fc-a6ea-3a3a290d4036.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100980011/ZZ/HERO_IMAGE_01_c22155c5-0be1-4136-bc8a-d0697b7aa47d.jpg",
+    "variants": [
+      {
+        "cmsId": "100358911",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "3181c0bf-1840-49fb-8f0d-57bde4c1ba03",
+    "title": "Zenless Zone Zero",
+    "imageUrl": "https://img.nvidiagrid.net/apps/102757911/ZZ/TV_BANNER_01_902feb06-dc30-4b2f-b379-2fee297f250c.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/102757911/ZZ/HERO_IMAGE_01_794e7347-3938-4e4a-a6b2-7881535a1f28.jpg",
+    "variants": [
+      {
+        "cmsId": "103500271",
+        "store": "UNKNOWN"
+      }
+    ]
+  },
+  {
+    "gameId": "fc68afe2-1004-49bc-b0f3-af2c21bdf4d1",
+    "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101909311/ZZ/TV_BANNER_01_44972f20-f6b4-45ac-a275-cd6b6e074c3d.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101909311/ZZ/HERO_IMAGE_01_56bebd1d-ec7a-4b2a-b9d6-ec78384909db.jpg",
+    "variants": [
+      {
+        "cmsId": "101909611",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "102759711",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "e5fc8a96-2cda-49ef-bd13-513bdc68045b",
+    "title": "Cyberpunk 2077®",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100884011/ZZ/TV_BANNER_01_742eeb39-c372-4b14-b0ff-2b2e8f02ee97.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100884011/ZZ/HERO_IMAGE_01_e6046ae5-c897-481f-b98b-557962310cf4.jpg",
+    "variants": [
+      {
+        "cmsId": "100856911",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "100838211",
+        "store": "GOG"
+      },
+      {
+        "cmsId": "101606111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "8a9b10a6-b8f4-46f3-a479-e480c304d78c",
+    "title": "Kingdom Come: Deliverance II",
+    "imageUrl": "https://img.nvidiagrid.net/apps/102823731/ZZ/TV_BANNER_01_21338a23-06ed-44eb-b493-366a33b5bb9e.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/102823731/ZZ/HERO_IMAGE_01_3b62097b-e93e-4566-845b-019218d3a69e.jpg",
+    "variants": [
+      {
+        "cmsId": "103235353",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "103234960",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107377793",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "dfdbc357-7f61-45cc-bf64-ae7117da12d5",
+    "title": "ARC Raiders",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101803711/ZZ/TV_BANNER_01_6adbd882-66c7-40bc-b47d-784eb38fd170.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101803711/ZZ/HERO_IMAGE_01_0811bf79-07c0-4df1-a459-ded3bb93f7fd.jpg",
+    "variants": [
+      {
+        "cmsId": "102071411",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "102071311",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107249108",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "3b6c8822-d334-45d8-9dc9-b6efd59778ab",
+    "title": "Warframe",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100883711/ZZ/TV_BANNER_01_4d7318d8-1be3-42c5-8082-dd0644527314.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100883711/ZZ/HERO_IMAGE_01_8d8c8016-5001-454e-98b8-ab412a9e2ccc.jpg",
+    "variants": [
+      {
+        "cmsId": "101677611",
+        "store": "UNKNOWN"
+      },
+      {
+        "cmsId": "101657411",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "11285111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "08bef896-0453-4d55-8786-2950db798626",
+    "title": "Arknights: Endfield",
+    "imageUrl": "https://img.nvidiagrid.net/apps/107039325/ZZ/TV_BANNER_01_e25a8476-8040-4083-8922-19a48c2cbe89.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/107039325/ZZ/HERO_IMAGE_01_91269a6d-3f74-4db3-a3f9-897ba1151281.jpg",
+    "variants": [
+      {
+        "cmsId": "107057914",
+        "store": "UNKNOWN"
+      }
+    ]
+  },
+  {
+    "gameId": "cb4e2225-1c30-456b-ac8e-1424f3218329",
+    "title": "Battlefield™ 6",
+    "imageUrl": "https://img.nvidiagrid.net/apps/103955842/ZZ/TV_BANNER_01_8f7b8453-2ee0-4651-aab2-06c359a84a88.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/103955842/ZZ/HERO_IMAGE_01_7d94d91c-f507-41ea-a4d7-9e328bf271f2.jpg",
+    "variants": [
+      {
+        "cmsId": "103962253",
+        "store": "EA_APP"
+      },
+      {
+        "cmsId": "103961756",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "afba7bfc-5fc1-4ac3-a056-1fc980b96d3a",
+    "title": "Subnautica 2",
+    "imageUrl": "https://img.nvidiagrid.net/apps/103611267/ZZ/TV_BANNER_01_9944ff73-dd26-4a0b-bbe0-d83221205ab9.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/103611267/ZZ/HERO_IMAGE_01_6acfcca9-36e8-41f3-91b6-a5d2cb527dc0.jpg",
+    "variants": [
+      {
+        "cmsId": "103998610",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "103613993",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107647091",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "7961b141-5ded-427f-bf57-a31229a6151d",
+    "title": "Warhammer 40,000: Space Marine 2",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101425111/ZZ/TV_BANNER_01_d5b94201-eff3-4eef-ac59-52e9e82740f5.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101425111/ZZ/HERO_IMAGE_01_77392d53-db3e-416e-a24e-b82e3b37bb60.jpg",
+    "variants": [
+      {
+        "cmsId": "102729011",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "100582811",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107167244",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "84f2605c-1af7-483d-a194-4db16ca4992d",
+    "title": "DayZ",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101054511/ZZ/TV_BANNER_01_015dc049-625e-4b1b-9309-4bfa7dd2fe3b.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101054511/ZZ/HERO_IMAGE_01_30dbbe6a-49f7-4dbb-a683-878833535134.jpg",
+    "variants": [
+      {
+        "cmsId": "17937411",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "1dd07d47-6601-42f7-80e9-e4d8db08ea1b",
+    "title": "Tom Clancy's Rainbow Six® Siege X",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100881611/ZZ/TV_BANNER_01_8c08afd1-b5e8-47b3-ac5e-d47be3ac5633.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100881611/ZZ/HERO_IMAGE_01_fff8e174-76ad-45b2-929c-4b82defdb66a.jpg",
+    "variants": [
+      {
+        "cmsId": "100065511",
+        "store": "UPLAY"
+      },
+      {
+        "cmsId": "100028511",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "8bfa0687-60fc-425e-9f10-6232693b90d7",
+    "title": "Call of Duty®",
+    "imageUrl": "https://img.nvidiagrid.net/apps/102697711/ZZ/TV_BANNER_01_2e282480-47a1-4da3-8efb-3d01213da708.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/102697711/ZZ/HERO_IMAGE_01_f5cd9db1-4685-448f-9924-d3cb562e3e48.jpg",
+    "variants": [
+      {
+        "cmsId": "102697911",
+        "store": "BATTLENET"
+      },
+      {
+        "cmsId": "101817511",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "103255176",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "076b3616-f8d4-4e3f-b0de-b383c4ab3365",
+    "title": "Total War™: WARHAMMER® III",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101509011/ZZ/TV_BANNER_01_2a8466a4-93e2-4679-a7c4-5e96747ffb38.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101509011/ZZ/HERO_IMAGE_01_7751c5e6-f85a-4cd9-a233-8e2a6259c0fe.jpg",
+    "variants": [
+      {
+        "cmsId": "102074011",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "100765511",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "a6fa9559-8072-4aca-a485-40e18a4fe89f",
+    "title": "Russian Fishing 4",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101385711/ZZ/TV_BANNER_01_cb1d13d4-affa-4d9f-a6bb-d63f94a77bfb.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101385711/ZZ/HERO_IMAGE_01_aabb9098-65ed-4d98-ae59-91bb8234e6f6.jpg",
+    "variants": [
+      {
+        "cmsId": "100240011",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "ac01742f-b3dd-4be3-86bc-79ac43e54e54",
+    "title": "Crimson Desert",
+    "imageUrl": "https://img.nvidiagrid.net/apps/103927180/ZZ/TV_BANNER_01_95161de3-501c-4af1-8674-d32a31c2b977.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/103927180/ZZ/HERO_IMAGE_01_9af532db-11d9-411e-879b-1ef7ef3e38de.jpg",
+    "variants": [
+      {
+        "cmsId": "103931169",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "107549478",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "5992f485-6ae8-4da3-b558-bc269cc142b7",
+    "title": "World of Warcraft®: Midnight",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100922111/ZZ/TV_BANNER_01_7ce554cc-1b3d-45fe-baf5-265c928f8056.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100922111/ZZ/HERO_IMAGE_01_cec966a3-11db-4057-b32a-873a3613b61d.jpg",
+    "variants": [
+      {
+        "cmsId": "103255961",
+        "store": "BATTLENET"
+      }
+    ]
+  },
+  {
+    "gameId": "6eb99257-edcb-4db0-8f58-c6e95b1f9027",
+    "title": "Farming Simulator 25",
+    "imageUrl": "https://img.nvidiagrid.net/apps/103198516/ZZ/TV_BANNER_01_ab092fc4-b6e0-41d6-b738-771511ada627.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/103198516/ZZ/HERO_IMAGE_01_6c585705-97c5-4aba-bf1f-91939d246337.jpg",
+    "variants": [
+      {
+        "cmsId": "103201183",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "103529486",
+        "store": "XBOX"
+      }
+    ]
+  },
+  {
+    "gameId": "f722ac3f-11b7-41e7-b971-5711dad43339",
+    "title": "BeamNG.drive",
+    "imageUrl": "https://img.nvidiagrid.net/apps/100987011/ZZ/TV_BANNER_01_4d957482-945f-44d4-9d39-e0102a1458ce.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/100987011/ZZ/HERO_IMAGE_01_cdf771c5-99ec-4c36-89a7-0810d0718dde.jpg",
+    "variants": [
+      {
+        "cmsId": "103497323",
+        "store": "EPIC"
+      },
+      {
+        "cmsId": "100163111",
+        "store": "STEAM"
+      }
+    ]
+  },
+  {
+    "gameId": "32172cf8-0067-43f6-ba36-89484b733ca0",
+    "title": "Hearts of Iron IV",
+    "imageUrl": "https://img.nvidiagrid.net/apps/101176011/ZZ/TV_BANNER_01_caec8e11-83bc-45c3-9bcd-05d0ec01f8c3.jpg",
+    "heroUrl": "https://img.nvidiagrid.net/apps/101176011/ZZ/HERO_IMAGE_01_ee354e11-f7a4-4d8d-a394-41fbd027f6aa.jpg",
+    "variants": [
+      {
+        "cmsId": "18544311",
+        "store": "STEAM"
+      },
+      {
+        "cmsId": "102461011",
+        "store": "XBOX"
+      }
+    ]
+  }
+]
