@@ -5,6 +5,11 @@ vars:
   PLUGIN_DIR: /home/deck/homebrew/plugins/decky-gfn
 
 tasks:
+  deploy:init:
+    desc: One-time — create the plugin dir on the Deck as deck-writable (asks for the Deck's sudo password)
+    cmds:
+      - ssh -t {{.DECK_HOST}} "sudo mkdir -p {{.PLUGIN_DIR}} && sudo chown -R deck:deck {{.PLUGIN_DIR}}"
+
   deploy:
     desc: Build, package, and rsync the plugin to the Deck ({{.DECK_HOST}})
     cmds:
