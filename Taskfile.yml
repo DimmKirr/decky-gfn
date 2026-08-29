@@ -1,0 +1,14 @@
+version: "3"
+
+vars:
+  DECK_HOST: '{{.DECK_HOST | default "deck@steamdeck"}}'
+  PLUGIN_DIR: /home/deck/homebrew/plugins/decky-gfn
+
+tasks:
+  dev:sync:
+    desc: Build, package, and rsync the plugin to the Deck ({{.DECK_HOST}})
+    cmds:
+      - pnpm build
+      - pnpm package
+      - rsync -azp --delete --chmod=D0755,F0755 build/decky-gfn/ {{.DECK_HOST}}:{{.PLUGIN_DIR}}/
+      - 'echo "synced — restart Decky Loader or reload the plugin on the Deck"'
