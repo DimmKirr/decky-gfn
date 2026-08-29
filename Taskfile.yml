@@ -10,5 +10,6 @@ tasks:
     cmds:
       - pnpm build
       - pnpm package
-      - rsync -azp --delete --chmod=D0755,F0755 build/decky-gfn/ {{.DECK_HOST}}:{{.PLUGIN_DIR}}/
+      - rsync -az --delete build/decky-gfn/ {{.DECK_HOST}}:{{.PLUGIN_DIR}}/
+      - ssh {{.DECK_HOST}} "chmod -R 755 {{.PLUGIN_DIR}}"
       - 'echo "synced — restart Decky Loader or reload the plugin on the Deck"'
