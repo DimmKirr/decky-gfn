@@ -1,7 +1,7 @@
 version: "3"
 
 vars:
-  DECK_HOST: '{{.DECK_HOST | default "deck@steamdeck"}}'
+  DECK_HOST: '{{.DECK_HOST | default "deck@steam.local"}}'
   PLUGIN_DIR: /home/deck/homebrew/plugins/decky-gfn
 
 tasks:
