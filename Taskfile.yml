@@ -5,7 +5,7 @@ vars:
   PLUGIN_DIR: /home/deck/homebrew/plugins/decky-gfn
 
 tasks:
-  dev:sync:
+  deploy:
     desc: Build, package, and rsync the plugin to the Deck ({{.DECK_HOST}})
     cmds:
       - pnpm build
