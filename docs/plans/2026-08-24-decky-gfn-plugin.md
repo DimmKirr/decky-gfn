@@ -8,7 +8,7 @@
 
 **Tech Stack:** `@decky/ui` 4.12, `@decky/api` 1.1.3, `@decky/rollup` 1.0.2, TypeScript, React 19 (dev only — Steam provides React at runtime), pnpm 9, Vitest + Testing Library, pytest, Vite harness, Playwright.
 
-**Repo:** `/Users/dmitry/dev/dimmkirr/decky-gfn`, branch `develop`. Commit after every task. No Co-Authored-By lines.
+**Repo:** `/Users/dmitry/dev/dimmkirr/decky-gfn`, branch `develop`. Do NOT commit — after all tasks pass, the user reviews and commits via `/git-group-commit`.
 
 **Reference facts (verified 2026-08-24):**
 - Launcher site: `https://gfn-game-launcher.pages.dev`; `GET /api/appimage?cmsId=<id>` already deployed (CORS `*`, streams binary).
@@ -186,12 +186,6 @@ class Plugin:
 
 Run: `pnpm install && pnpm build`
 Expected: `dist/index.js` exists, no errors.
-
-**Step 6: Commit**
-
-```bash
-git add -A && git commit -m "Scaffold plugin from decky-plugin-template (api_version 1)"
-```
 
 ---
 
@@ -423,8 +417,6 @@ describe("decky stubs", () => {
 
 **Step 6: Run** `pnpm test` — expected: 2 passing. (If it fails on alias resolution, check `import.meta.dirname` — requires node ≥20.11, we have 24.)
 
-**Step 7: Commit** — `git add -A && git commit -m "Add Vitest infra with @decky/ui and @decky/api stubs"`
-
 ---
 
 ### Task 3: `core/types.ts` + `core/catalog.ts` (TDD)
@@ -623,8 +615,6 @@ export class CatalogClient implements CatalogSource {
 
 **Step 5: Run** `pnpm test tests/core/catalog.test.ts` — expected: 6 passing.
 
-**Step 6: Commit** — `git commit -am "Add core types and CatalogClient (cached, typed errors)"` (use `git add -A` first for new files).
-
 ---
 
 ### Task 4: `core/install.ts` — install/uninstall orchestration (TDD)
@@ -812,8 +802,6 @@ export async function uninstallGame(ports: UninstallPorts, installed: InstalledG
 
 **Step 4: Run** `pnpm test` — expected: all passing.
 
-**Step 5: Commit** — `git add -A && git commit -m "Add install/uninstall orchestration with rollback"`
-
 ---
 
 ### Task 5: Catalog fixture + mock catalog server
@@ -904,8 +892,6 @@ kill %1
 ```
 
 Expected: JSON with Counter-Strike 2; `200 65536`; `404`.
-
-**Step 4: Commit** — `git add -A && git commit -m "Add catalog fixture and local mock server (catalog + appimage)"`
 
 ---
 
@@ -1177,8 +1163,6 @@ Note: `urllib.error.URLError` is an `OSError` subclass, so the second `except` c
 
 **Step 6: Run** `pytest tests/backend -q` — expected: 5 passing.
 
-**Step 7: Commit** — `git add -A && git commit -m "Implement backend: streamed AppImage download, install registry"`
-
 ---
 
 ### Task 7: Adapters — steam, backend, services context (TDD for steam)
@@ -1338,8 +1322,6 @@ export function useServices(): Services {
 
 **Step 5: Run** `pnpm test && pnpm typecheck` — expected: all green.
 
-**Step 6: Commit** — `git add -A && git commit -m "Add steam/backend adapters and Services context"`
-
 ---
 
 ### Task 8: QAM panel component (TDD)
@@ -1464,7 +1446,7 @@ export function QamPanel() {
 }
 ```
 
-**Step 4: Run** `pnpm test` — green. **Step 5: Commit** — `git add -A && git commit -m "Add QAM panel: browse entry + installed list"`
+**Step 4: Run** `pnpm test` — green.
 
 ---
 
@@ -1694,7 +1676,7 @@ export function GameDetail({ game, onBack }: { game: CatalogGame; onBack(): void
 }
 ```
 
-**Step 3: Run** `pnpm test` — green. **Step 4: Commit** — `git add -A && git commit -m "Add catalog page: debounced search, tile grid, error retry"`
+**Step 3: Run** `pnpm test` — green.
 
 ---
 
@@ -1931,7 +1913,7 @@ export function GameDetail({ game, onBack }: { game: CatalogGame; onBack(): void
 
 Wait — the error-state test expects an Install button while the error message shows; the code above renders both. Good.
 
-**Step 3: Run** `pnpm test` — green. **Step 4: Commit** — `git add -A && git commit -m "Add game detail with variant picker and install/uninstall flow"`
+**Step 3: Run** `pnpm test` — green.
 
 ---
 
@@ -2034,8 +2016,6 @@ export default definePlugin(() => {
 
 **Step 3: Run** `pnpm typecheck && pnpm build && pnpm test` — expected: dist/index.js builds, all tests green.
 
-**Step 4: Commit** — `git add -A && git commit -m "Wire plugin entry: real services, /gfn-catalog route, QAM panel"`
-
 ---
 
 ### Task 12: Packaging script
@@ -2063,8 +2043,6 @@ Run: `chmod +x scripts/package.sh`
 **Step 2: `README.md`** — short: what it is, `pnpm install/build/test`, `pnpm mock:catalog` + `pnpm harness` for local dev, `pnpm package` for the sideload zip, deploy-to-Deck instructions (Decky → Developer → Install from ZIP; or rsync the `build/decky-gfn` folder to `~/homebrew/plugins/`), and the macOS↔Linux `node_modules` caveat (delete `node_modules` when switching sides).
 
 **Step 3: Verify** — `pnpm build && pnpm package && python3 -m zipfile -l decky-gfn.zip` — expected listing shows `decky-gfn/plugin.json`, `decky-gfn/dist/index.js`, `decky-gfn/main.py`.
-
-**Step 4: Commit** — `git add -A && git commit -m "Add sideload packaging script and README"`
 
 ---
 
@@ -2227,8 +2205,6 @@ createRoot(document.getElementById("page")!).render(
 
 **Step 4: Manual check** — terminal 1: `pnpm mock:catalog`; terminal 2: `pnpm harness`; open `http://localhost:5173`: search, open a game, Install → progress → Play, steam log shows AddShortcut, QAM panel lists the game after reload.
 
-**Step 5: Commit** — `git add -A && git commit -m "Add browser harness: full plugin UI against mock catalog + fake Steam"`
-
 ---
 
 ### Task 14: Playwright smoke test
@@ -2277,8 +2253,6 @@ test("browse → search → install → play", async ({ page }) => {
 ```
 
 **Step 3: Run** — `npx playwright install chromium` (first time), then `pnpm test:e2e` — expected: 1 passing.
-
-**Step 4: Commit** — `git add -A && git commit -m "Add Playwright smoke test for the install flow"`
 
 ---
 
@@ -2345,8 +2319,6 @@ jobs:
 ```
 
 **Step 2: Validate locally** — run the same commands the workflow runs: `pnpm typecheck && pnpm build && pnpm test && ./scripts/package.sh && pytest -q`. All green.
-
-**Step 3: Commit** — `git add -A && git commit -m "Add CI: typecheck, build, unit + e2e + backend tests, zip artifact"`
 
 ---
 
