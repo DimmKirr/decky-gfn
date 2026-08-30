@@ -6,9 +6,10 @@ import { GameTile } from "./GameTile";
 import { GameDetail } from "./GameDetail";
 import type { CatalogGame, CatalogPageData } from "../core/types";
 
+// 4 tiles per row filling the full width — no trailing negative space.
 const gridStyle: React.CSSProperties = {
-  display: "flex",
-  flexWrap: "wrap",
+  display: "grid",
+  gridTemplateColumns: "repeat(4, 1fr)",
   gap: 12,
   padding: "12px 0",
 };

@@ -83,3 +83,12 @@ export const Navigation = {
   Navigate: (_path: string) => {},
   CloseSideMenus: () => {},
 };
+
+/* Route params for useParams — set per test/harness via __setParams. */
+let params: Record<string, string> = {};
+export function __setParams(p: Record<string, string>): void {
+  params = p;
+}
+export function useParams<T>(): T {
+  return params as T;
+}

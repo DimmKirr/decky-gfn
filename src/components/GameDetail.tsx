@@ -2,27 +2,23 @@ import { DialogButton, Dropdown, Focusable, ProgressBarWithInfo, staticClasses }
 import { useState } from "react";
 import { useServices } from "../services";
 import { useInstall } from "./useInstall";
+import { useCachedImage } from "./useCachedImage";
 import type { CatalogGame } from "../core/types";
 
-const STORE_LABELS: Record<string, string> = {
-  STEAM: "Steam", EPIC: "Epic Games", GOG: "GOG", UBISOFT: "Ubisoft", UPLAY: "Ubisoft", EA_APP: "EA App",
-};
-
-function storeLabel(store: string): string {
-  return STORE_LABELS[store] ?? store;
-}
+import { storeLabel } from "./stores";
 
 export function GameDetail({ game, onBack }: { game: CatalogGame; onBack(): void }) {
   const services = useServices();
   const { state, start, uninstall } = useInstall(game);
   const [variant, setVariant] = useState(game.variants[0]);
+  const heroSrc = useCachedImage(game.heroUrl);
 
   return (
     <Focusable onCancel={onBack} style={{ padding: "40px 24px 24px" }}>
-      {game.heroUrl && (
+      {heroSrc && (
         <div
           style={{
-            height: 180, borderRadius: 8, backgroundImage: `url(${game.heroUrl})`,
+            height: 180, borderRadius: 8, backgroundImage: `url(${heroSrc})`,
             backgroundSize: "cover", backgroundPosition: "center", marginBottom: 16,
           }}
         />

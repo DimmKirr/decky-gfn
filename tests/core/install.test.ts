@@ -28,7 +28,7 @@ describe("installGame", () => {
     const out = await installGame(ports, GAME, VARIANT, (p) => phases.push(p));
     expect(out).toEqual({ ok: true, appId: 12345 });
     expect(ports.addShortcut).toHaveBeenCalledWith("Cyberpunk 2077", "/data/cyberpunk.AppImage");
-    expect(ports.setArtwork).toHaveBeenCalledWith(12345, GAME.imageUrl);
+    expect(ports.setArtwork).toHaveBeenCalledWith(12345, { imageUrl: GAME.imageUrl, heroUrl: undefined });
     expect(ports.recordInstall).toHaveBeenCalledWith({
       gameId: "uuid-1",
       title: "Cyberpunk 2077",

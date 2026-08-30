@@ -53,6 +53,32 @@ def test_install_registry_roundtrip(fake_decky, http_fixture, monkeypatch):
     assert asyncio.run(plugin.list_installed()) == []
 
 
+def test_file_exists(fake_decky, http_fixture, monkeypatch):
+    plugin = load_plugin(fake_decky, http_fixture, monkeypatch)
+    result = asyncio.run(plugin.download_appimage("good", "Quake"))
+    path = result["value"]["path"]
+    assert asyncio.run(plugin.file_exists(path)) is True
+    assert asyncio.run(plugin.file_exists(path + ".nope")) is False
+
+
+def test_cache_image_downloads_once_and_returns_data_url(fake_decky, http_fixture, monkeypatch):
+    plugin = load_plugin(fake_decky, http_fixture, monkeypatch)
+    url = f"{http_fixture}/img/banner.jpg"
+    first = asyncio.run(plugin.cache_image(url))
+    assert first["ok"] is True
+    assert first["value"]["dataUrl"].startswith("data:image/jpeg;base64,")
+    hits_after_first = fake_decky.image_hits[0]
+    second = asyncio.run(plugin.cache_image(url))
+    assert second == first
+    assert fake_decky.image_hits[0] == hits_after_first  # served from disk cache
+
+
+def test_cache_image_rejects_non_http(fake_decky, http_fixture, monkeypatch):
+    plugin = load_plugin(fake_decky, http_fixture, monkeypatch)
+    result = asyncio.run(plugin.cache_image("file:///etc/passwd"))
+    assert result["ok"] is False
+
+
 def test_remove_appimage_only_inside_own_dir(fake_decky, http_fixture, monkeypatch, tmp_path):
     plugin = load_plugin(fake_decky, http_fixture, monkeypatch)
     outside = tmp_path / "outside.AppImage"

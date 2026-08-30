@@ -1,9 +1,14 @@
 import type { CatalogGame, InstalledGame, Variant, BackendResult } from "./types";
 
+export interface ArtworkUrls {
+  imageUrl: string;
+  heroUrl?: string;
+}
+
 export interface InstallPorts {
   download(cmsId: string, title: string): Promise<BackendResult<{ path: string }>>;
   addShortcut(title: string, path: string): Promise<number>;
-  setArtwork(appId: number, imageUrl: string): Promise<void>;
+  setArtwork(appId: number, art: ArtworkUrls): Promise<void>;
   removeFile(path: string): Promise<void>;
   recordInstall(entry: InstalledGame): Promise<void>;
 }
@@ -47,7 +52,7 @@ export async function installGame(
   }
 
   try {
-    await ports.setArtwork(appId, game.imageUrl);
+    await ports.setArtwork(appId, { imageUrl: game.imageUrl, heroUrl: game.heroUrl });
   } catch {
     // Non-fatal: the shortcut works without custom art.
   }

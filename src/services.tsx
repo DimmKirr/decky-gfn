@@ -9,6 +9,8 @@ export interface Services {
   install: InstallPorts;
   uninstall: UninstallPorts;
   listInstalled(): Promise<InstalledGame[]>;
+  /** Resolve a catalog image URL to a locally cached data URL (or itself on miss). */
+  resolveImage(url: string): Promise<string>;
   onDownloadProgress(cb: (p: DownloadProgress) => void): () => void;
   openCatalog(): void;
   navigateToApp(appId: number): void;

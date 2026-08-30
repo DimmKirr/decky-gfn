@@ -10,7 +10,7 @@ export function makeFakeServices(overrides: Partial<Services> = {}): Services {
     install: {
       download: vi.fn(async () => ({ ok: true as const, value: { path: "/data/x.AppImage" } })),
       addShortcut: vi.fn(async () => 111),
-      setArtwork: vi.fn(async () => {}),
+      setArtwork: vi.fn(async (_appId: number, _art: { imageUrl: string; heroUrl?: string }) => {}),
       removeFile: vi.fn(async () => {}),
       recordInstall: vi.fn(async () => {}),
     },
@@ -20,6 +20,7 @@ export function makeFakeServices(overrides: Partial<Services> = {}): Services {
       removeRecord: vi.fn(async () => {}),
     },
     listInstalled: vi.fn(async (): Promise<InstalledGame[]> => []),
+    resolveImage: vi.fn(async (url: string) => url),
     onDownloadProgress: vi.fn(() => () => {}),
     openCatalog: vi.fn(),
     navigateToApp: vi.fn(),

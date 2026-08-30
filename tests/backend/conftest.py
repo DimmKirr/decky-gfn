@@ -29,6 +29,8 @@ def fake_decky(tmp_path, monkeypatch):
 
 class _Handler(http.server.BaseHTTPRequestHandler):
     payload = b"\x7fELF" + b"\x01" * (128 * 1024)
+    image = b"\xff\xd8\xff\xe0" + b"\x02" * 512  # jpeg magic
+    image_hits = [0]
 
     def do_GET(self):
         if self.path.startswith("/api/appimage") and "cmsId=good" in self.path:
@@ -36,6 +38,13 @@ class _Handler(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-Length", str(len(self.payload)))
             self.end_headers()
             self.wfile.write(self.payload)
+        elif self.path.startswith("/img/"):
+            self.image_hits[0] += 1
+            self.send_response(200)
+            self.send_header("Content-Type", "image/jpeg")
+            self.send_header("Content-Length", str(len(self.image)))
+            self.end_headers()
+            self.wfile.write(self.image)
         else:
             self.send_response(404)
             self.end_headers()
@@ -45,7 +54,9 @@ class _Handler(http.server.BaseHTTPRequestHandler):
 
 
 @pytest.fixture()
-def http_fixture():
+def http_fixture(fake_decky):
+    _Handler.image_hits[0] = 0
+    fake_decky.image_hits = _Handler.image_hits
     server = http.server.HTTPServer(("127.0.0.1", 0), _Handler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()

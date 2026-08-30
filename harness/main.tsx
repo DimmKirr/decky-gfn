@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { AppPagePreview } from "./AppPagePreview";
 import { CatalogClient } from "../src/core/catalog";
 import type { Services } from "../src/services";
 import { ServicesProvider } from "../src/services";
@@ -8,6 +9,9 @@ import type { InstalledGame } from "../src/core/types";
 import type { DownloadProgress } from "../src/adapters/backend";
 
 const CATALOG_BASE = "http://localhost:8787";
+
+// `?view=app` renders the Steam-free app-page replica for visual tuning.
+const PREVIEW_MODE = new URLSearchParams(location.search).get("view") === "app";
 
 const logEl = document.getElementById("steam-log")!;
 function steamLog(line: string) {
@@ -46,8 +50,8 @@ const services: Services = {
       steamLog(`SteamClient.Apps.AddShortcut("${title}", "${path}") -> ${appId}`);
       return appId;
     },
-    async setArtwork(appId, imageUrl) {
-      steamLog(`SteamClient.Apps.SetCustomArtworkForApp(${appId}, ${imageUrl.slice(0, 60)}…)`);
+    async setArtwork(appId, art) {
+      steamLog(`SteamClient.Apps.SetCustomArtworkForApp(${appId}, ${art.imageUrl.slice(0, 60)}…)`);
     },
     async removeFile(path) {
       steamLog(`backend: rm ${path}`);
@@ -76,6 +80,9 @@ const services: Services = {
     progressListeners.add(cb);
     return () => progressListeners.delete(cb);
   },
+  async resolveImage(url) {
+    return url; // browser cache stands in for the backend disk cache
+  },
   openCatalog() {
     steamLog("Navigation.Navigate(/gfn-catalog)");
   },
@@ -87,13 +94,19 @@ const services: Services = {
   },
 };
 
-createRoot(document.getElementById("qam")!).render(
-  <ServicesProvider value={services}>
-    <QamPanel />
-  </ServicesProvider>,
-);
-createRoot(document.getElementById("page")!).render(
-  <ServicesProvider value={services}>
-    <CatalogPage />
-  </ServicesProvider>,
-);
+if (PREVIEW_MODE) {
+  document.getElementById("qam")!.style.display = "none";
+  document.getElementById("steam-log")!.style.display = "none";
+  createRoot(document.getElementById("page")!).render(<AppPagePreview />);
+} else {
+  createRoot(document.getElementById("qam")!).render(
+    <ServicesProvider value={services}>
+      <QamPanel />
+    </ServicesProvider>,
+  );
+  createRoot(document.getElementById("page")!).render(
+    <ServicesProvider value={services}>
+      <CatalogPage />
+    </ServicesProvider>,
+  );
+}

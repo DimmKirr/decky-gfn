@@ -6,6 +6,10 @@ export const downloadAppimage = callable<[cmsId: string, title: string], Backend
 );
 export const removeAppimage = callable<[path: string], { ok: boolean }>("remove_appimage");
 export const listInstalled = callable<[], InstalledGame[]>("list_installed");
+export const fileExists = callable<[path: string], boolean>("file_exists");
+export const cacheImage = callable<[url: string], BackendResult<{ dataUrl: string; path: string }>>(
+  "cache_image",
+);
 export const recordInstall = callable<[entry: InstalledGame], { ok: boolean }>("record_install");
 export const removeInstall = callable<[gameId: string], { ok: boolean }>("remove_install");
 
