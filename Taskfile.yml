@@ -3,18 +3,25 @@ version: "3"
 vars:
   DECK_HOST: '{{.DECK_HOST | default "deck@steam.local"}}'
   PLUGIN_DIR: /home/deck/homebrew/plugins/decky-gfn
+  STEAM_DEV_TOOLS_URL: '{{.STEAM_DEV_TOOLS_URL | default "http://steam.local:8081"}}'
 
 tasks:
-  deploy:init:
-    desc: One-time — create the plugin dir on the Deck as deck-writable (asks for the Deck's sudo password)
-    cmds:
-      - ssh -t {{.DECK_HOST}} "sudo mkdir -p {{.PLUGIN_DIR}} && sudo chown -R deck:deck {{.PLUGIN_DIR}}"
-
   deploy:
-    desc: Build, package, and rsync the plugin to the Deck ({{.DECK_HOST}})
+    desc: Build, package, and deploy the plugin to the Deck ({{.DECK_HOST}}; asks for the Deck's sudo password)
+    vars:
+      STAGE: /home/deck/.decky-gfn-stage
     cmds:
       - pnpm build
       - pnpm package
-      - rsync -az --delete build/decky-gfn/ {{.DECK_HOST}}:{{.PLUGIN_DIR}}/
-      - ssh {{.DECK_HOST}} "chmod -R 755 {{.PLUGIN_DIR}}"
-      - 'echo "synced — restart Decky Loader or reload the plugin on the Deck"'
+      # Decky Loader chowns the plugins dir to root on every load, so sync to a
+      # deck-writable staging dir first, then move into place with sudo.
+      - rsync -az --delete build/decky-gfn/ {{.DECK_HOST}}:{{.STAGE}}/
+      - ssh -t {{.DECK_HOST}} "sudo rsync -a --delete {{.STAGE}}/ {{.PLUGIN_DIR}}/ && sudo chmod -R 755 {{.PLUGIN_DIR}} && sudo systemctl restart plugin_loader"
+      - 'echo "deployed — Decky Loader restarted, plugin reloaded"'
+
+  test:e2e:
+    desc: On-device smoke via CEF debugging ({{.STEAM_DEV_TOOLS_URL}}; enable Decky → Settings → Developer → Allow Remote CEF Debugging)
+    env:
+      STEAM_DEV_TOOLS_URL: "{{.STEAM_DEV_TOOLS_URL}}"
+    cmds:
+      - pnpm test:e2e:deck
