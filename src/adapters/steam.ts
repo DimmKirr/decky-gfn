@@ -19,7 +19,9 @@ function steamApps(): SteamApps {
 // its libGL dependency doesn't resolve and ld.so kills the process before the
 // script runs. Clearing LD_PRELOAD is mandatory (the overlay can't cross the
 // flatpak sandbox into GFN anyway).
-export const LAUNCH_OPTIONS = "LD_PRELOAD= %command%";
+// --force makes the GFN AppImage launch straight into the stream with no
+// confirmation window/prompts.
+export const LAUNCH_OPTIONS = "LD_PRELOAD= %command% --force";
 
 const ASSET_GRID = 0; // 0 = grid/capsule, 1 = hero, 2 = logo
 const ASSET_HERO = 1;

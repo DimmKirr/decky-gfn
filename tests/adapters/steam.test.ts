@@ -49,10 +49,11 @@ describe("steam adapter", () => {
     expect(sortAsFor("Counter-Strike 2")).toBe("Counter-Strike 2");
   });
 
-  it("launch options neutralize LD_PRELOAD so the overlay lib can't kill the launch", () => {
+  it("launch options neutralize LD_PRELOAD and force a promptless launch", () => {
     // Steam injects gameoverlayrenderer.so into non-Steam shortcuts; in Desktop Mode
     // sessions its libGL dependency doesn't resolve and ld.so kills the process.
-    expect(LAUNCH_OPTIONS).toBe("LD_PRELOAD= %command%");
+    // --force skips the AppImage's confirmation window.
+    expect(LAUNCH_OPTIONS).toBe("LD_PRELOAD= %command% --force");
   });
 
   it("addShortcut throws when Steam returns a non-positive id", async () => {
