@@ -52,8 +52,9 @@ describe("steam adapter", () => {
   it("launch options neutralize LD_PRELOAD and force a promptless launch", () => {
     // Steam injects gameoverlayrenderer.so into non-Steam shortcuts; in Desktop Mode
     // sessions its libGL dependency doesn't resolve and ld.so kills the process.
-    // --force skips the AppImage's confirmation window.
-    expect(LAUNCH_OPTIONS).toBe("LD_PRELOAD= %command% --force");
+    // --force skips the AppImage's confirmation window; --autoinstall skips
+    // its install/update prompts.
+    expect(LAUNCH_OPTIONS).toBe("LD_PRELOAD= %command% --force --autoinstall");
   });
 
   it("addShortcut throws when Steam returns a non-positive id", async () => {

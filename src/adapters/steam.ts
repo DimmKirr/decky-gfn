@@ -20,8 +20,9 @@ function steamApps(): SteamApps {
 // script runs. Clearing LD_PRELOAD is mandatory (the overlay can't cross the
 // flatpak sandbox into GFN anyway).
 // --force makes the GFN AppImage launch straight into the stream with no
-// confirmation window/prompts.
-export const LAUNCH_OPTIONS = "LD_PRELOAD= %command% --force";
+// confirmation window/prompts; --autoinstall lets it install/update itself
+// without asking when launched from a decky-created shortcut.
+export const LAUNCH_OPTIONS = "LD_PRELOAD= %command% --force --autoinstall";
 
 const ASSET_GRID = 0; // 0 = grid/capsule, 1 = hero, 2 = logo
 const ASSET_HERO = 1;
